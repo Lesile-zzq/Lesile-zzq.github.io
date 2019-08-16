@@ -44,3 +44,10 @@ function showActiveTree(jqNode,isSiblings) {
 
     });
 }
+/*window.onload=function () {
+    var hl=$(".my_aside").outerHeight();
+    var hr=$(".my_content").outerHeight();
+    var mh=Math.max(hl,hr);
+    $(".my_aside").height(mh);
+    $(".my_content").height(mh);
+}*/
