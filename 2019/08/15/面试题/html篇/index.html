@@ -16,14 +16,11 @@
         <!--引入侧边栏-->
         <aside id="aside" class="my_aside">
             <!--搜索栏-->
-
-<section class="is_search">
-    <form action="#" method="post">
-        <input type="text" name="search" placeholder="查找" class="search">
+<div id="search">
+        <input type="text" placeholder="search">
         <span class="fa fa-search"></span>
-    </form>
-</section>
-<p class="text1">我的博客</p>
+</div>
+<p class="text1">文章分类</p>
 
 <!--侧边目录栏-->
 <div id="tree">
@@ -33,14 +30,59 @@
                         <li class="directory">
                             <a href="#" class="directory">
                                 <i class="fa fa-folder"></i>
-                               经点布局问题
+                               经典布局问题
                             </a>
                             
             <ul>
                 <li class="file">
-                    <a href="/2019/08/15/经点布局问题/1/">
+                    <a href="/2019/08/17/经典布局问题/弹性布局/">
                         <i class="fa fa-file"></i>
-                        1
+                        弹性布局
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/经典布局问题/栅格布局/">
+                        <i class="fa fa-file"></i>
+                        栅格布局
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/15/经典布局问题/浮动(1)/">
+                        <i class="fa fa-file"></i>
+                        浮动(1)
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/经典布局问题/浮动(2)/">
+                        <i class="fa fa-file"></i>
+                        浮动(2)
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/经典布局问题/相对定位/">
+                        <i class="fa fa-file"></i>
+                        相对定位
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/经典布局问题/绝对定位/">
+                        <i class="fa fa-file"></i>
+                        绝对定位
                     </a>
                 </li>
             </ul>
@@ -69,6 +111,15 @@
                     <a href="/2019/08/15/面试题/html篇/">
                         <i class="fa fa-file"></i>
                         html篇
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/面试题/js篇/">
+                        <i class="fa fa-file"></i>
+                        js篇
                     </a>
                 </li>
             </ul>
@@ -147,7 +198,7 @@
         </aside>
         <!--引入导航-->
 
-        <div id="content_1">
+        <div id="content_3">
             <nav>
                 <ul id="menu" class="d-flex justify-content-end">
     <!--内部链接本页面直接跳转-->
@@ -157,11 +208,11 @@
         </li>
         
         <li class="menu-item">
-            <a href="/archive/index.html/" class="menu-item-link">学习笔记</a>
+            <a href="/index" class="menu-item-link">学习笔记</a>
         </li>
         
         <li class="menu-item">
-            <a href="/" class="menu-item-link">个人简历</a>
+            <a href="/我的简历" class="menu-item-link">我的简历</a>
         </li>
         
     <!--外部链接打开新的窗口跳转-->
@@ -174,9 +225,10 @@
 </ul>
 
             </nav>
+            <div id="content_1">
             <!--引入正文-->
-            <div id="content" class="my_content">
-                <!--md编译成html后的文件模板-->
+                <div id="content" class="my_content">
+                    <!--md编译成html后的文件模板-->
 <div>
     <span id="post-author">作者:周哲群</span>
     <span id="post-date">2019-08-15 13:20:53</span>
@@ -371,40 +423,91 @@
 
 </div>
 
-            </div>
-        </div>
-        <div id="content_2">
-            <div id="logo">
-    <h1 class="mobileUI-site-name">smile</h1>
-</div>
-<section class="is_text_style1">
-    <div class="inner">
-        <p>
-            <strong>随心:</strong>
-            <span>走自己的路，让别人去说吧</span>
-        </p>
+                </div>
+                <div id="content_2">
+                     <div id="aside_r">
+    <div id="logo">
+        <h1 class="mobileUI-site-name">smile</h1>
     </div>
-</section>
-<section class="is_recent_ports">
-    <h2>最近帖子</h2>
-    <ul>
-        <li><a href="#">走自己的路，让别人去说吧...</a></li>
-        <li><a href="#">走自己的路，让别人去说吧</a></li>
-        <li><a href="#">走自己的路，让别人去说吧</a></li>
-        <li><a href="#">走自己的路，让别人去说吧</a></li>
-        <li><a href="#">走自己的路，让别人去说吧</a></li>
-    </ul>
-</section>
-<!--最近评论-->
-<section class="is_recent_comments">
-    <h2>最近评论</h2>
-    <ul>
-        <li><a href="#">案例</a></li>
-        <li> <a href="#">流量</a></li>
-        <li> <a href="#">世界级的</a></li>
-    </ul>
-</section>
+    <section class="is_text_style1">
+        <div class="inner">
+            <p class="my_border">
+                <strong>随心:</strong>
+                <span>走自己的路，让别人去说吧</span>
+            </p>
         </div>
+    </section>
+    <div class="is_recent_ports">
+        <h2>最近帖子</h2>
+        <ul>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/面试题/js篇/">js篇</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/栅格布局/">栅格布局</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/弹性布局/">弹性布局</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/浮动(2)/">浮动(2)</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/15/经典布局问题/浮动(1)/">浮动(1)</a>
+                <span class="aside_r_date">
+                2019-08-15</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/相对定位/">相对定位</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/绝对定位/">绝对定位</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/15/面试题/css篇/">css篇</a>
+                <span class="aside_r_date">
+                2019-08-15</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/15/面试题/html篇/">html篇</a>
+                <span class="aside_r_date">
+                2019-08-15</span>
+            </li>
+            
+            
+        </ul>
+    </div>
+    <!--最近评论-->
+    <section class="is_recent_comments">
+        <h2>最近评论</h2>
+        <ul>
+            <li><a href="#">暂无相关内容 </a></li>
+        </ul>
+    </section>
+</div>
+                </div>
+            </div>
     </div>
 
     <script src="/lib/highlight/highlight.pack.js"></script>
@@ -414,6 +517,6 @@
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/main.js"></script>
 
-
+    </div>
 </body>
 </html>

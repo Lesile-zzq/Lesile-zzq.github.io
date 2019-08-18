@@ -16,14 +16,11 @@
         <!--引入侧边栏-->
         <aside id="aside" class="my_aside">
             <!--搜索栏-->
-
-<section class="is_search">
-    <form action="#" method="post">
-        <input type="text" name="search" placeholder="查找" class="search">
+<div id="search">
+        <input type="text" placeholder="search">
         <span class="fa fa-search"></span>
-    </form>
-</section>
-<p class="text1">我的博客</p>
+</div>
+<p class="text1">文章分类</p>
 
 <!--侧边目录栏-->
 <div id="tree">
@@ -33,14 +30,59 @@
                         <li class="directory">
                             <a href="#" class="directory">
                                 <i class="fa fa-folder"></i>
-                               经点布局问题
+                               经典布局问题
                             </a>
                             
             <ul>
                 <li class="file">
-                    <a href="/2019/08/15/经点布局问题/1/">
+                    <a href="/2019/08/17/经典布局问题/弹性布局/">
                         <i class="fa fa-file"></i>
-                        1
+                        弹性布局
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/经典布局问题/栅格布局/">
+                        <i class="fa fa-file"></i>
+                        栅格布局
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/15/经典布局问题/浮动(1)/">
+                        <i class="fa fa-file"></i>
+                        浮动(1)
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/经典布局问题/浮动(2)/">
+                        <i class="fa fa-file"></i>
+                        浮动(2)
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/经典布局问题/相对定位/">
+                        <i class="fa fa-file"></i>
+                        相对定位
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/经典布局问题/绝对定位/">
+                        <i class="fa fa-file"></i>
+                        绝对定位
                     </a>
                 </li>
             </ul>
@@ -69,6 +111,15 @@
                     <a href="/2019/08/15/面试题/html篇/">
                         <i class="fa fa-file"></i>
                         html篇
+                    </a>
+                </li>
+            </ul>
+    
+            <ul>
+                <li class="file">
+                    <a href="/2019/08/17/面试题/js篇/">
+                        <i class="fa fa-file"></i>
+                        js篇
                     </a>
                 </li>
             </ul>
@@ -147,7 +198,7 @@
         </aside>
         <!--引入导航-->
 
-        <div id="content_1">
+        <div id="content_3">
             <nav>
                 <ul id="menu" class="d-flex justify-content-end">
     <!--内部链接本页面直接跳转-->
@@ -157,11 +208,11 @@
         </li>
         
         <li class="menu-item">
-            <a href="/archive/index.html/" class="menu-item-link">学习笔记</a>
+            <a href="/index" class="menu-item-link">学习笔记</a>
         </li>
         
         <li class="menu-item">
-            <a href="/" class="menu-item-link">个人简历</a>
+            <a href="/我的简历" class="menu-item-link">我的简历</a>
         </li>
         
     <!--外部链接打开新的窗口跳转-->
@@ -174,51 +225,207 @@
 </ul>
 
             </nav>
+            <div id="content_1">
             <!--引入正文-->
-            <div id="content" class="my_content">
-                <!--md编译成html后的文件模板-->
+                <div id="content" class="my_content">
+                    <!--md编译成html后的文件模板-->
 <div>
     <span id="post-author">作者:周哲群</span>
     <span id="post-date">2019-08-15 13:21:22</span>
 </div>
 <div id="article">
-    
+    <h2 id="前端开发面试题总结之——CSS"><a href="#前端开发面试题总结之——CSS" class="headerlink" title="前端开发面试题总结之——CSS"></a>前端开发面试题总结之——CSS</h2><h4 id="相关知识点"><a href="#相关知识点" class="headerlink" title="相关知识点"></a>相关知识点</h4><p>CSS盒模型、div居中、浮动、布局、选择器</p>
+<h4 id="题目-amp-答案"><a href="#题目-amp-答案" class="headerlink" title="题目&amp;答案"></a>题目&amp;答案</h4><ul>
+<li><p><strong>介绍一下标准的CSS的盒子模型？低版本的IE的盒子模型有什么不同？</strong></p>
+<div class="p_bgcolor">
+    <p>盒子模型有两种：IE盒子模型（IE5.5及以下），W3C标准盒子模型</p>
+    <p>&nbsp;&nbsp;（1） 标准盒子模型：宽度 = 内容的宽度(content)+border+padding+margin</p>
+    <p>&nbsp;&nbsp;（2） 低版本IE盒子模型：宽度 = 内容的宽度(content+border+padding)+margin</p>
 </div>
 
-            </div>
-        </div>
-        <div id="content_2">
-            <div id="logo">
-    <h1 class="mobileUI-site-name">smile</h1>
+
+
+</li>
+</ul>
+<ul>
+<li><p><strong>如何居中一个浮动元素**</strong>？**</p>
+<pre><code>id选择器（# myid）
+类选择器（.myclassname）
+标签选择器（div、h1、p）
+相邻选择器（h1 + p）
+子选择器（ul &lt; li）
+后代选择器（li a）
+通配符选择器（ * ）
+属性选择器（a[rel = &quot;external&quot;]）
+伪类选择器（a: hover, li: nth - child）
+可继承： font-size font-family color, UL LI DL DD DT;
+不可继承 ：border padding margin width height ;
+优先级就近原则，样式定义最近者为准，载入样式以最后载入的定位为准。
+优先级为：
+       !important &gt;  id &gt; class &gt; tag  
+       important 比 内联优先级高
+CSS3新增伪类举例：
+p:first-of-type 选择属于其父元素的首个&lt;p&gt;元素的每个&lt;p&gt;元素。
+p:last-of-type  选择属于其父元素的最后&lt;p&gt;元素的每个&lt;p&gt;元素。
+p:only-of-type  选择属于其父元素唯一的&lt;p&gt;元素的每个&lt;p&gt;元素。
+p:only-child    选择属于其父元素的唯一子元素的每个&lt;p&gt;元素。
+p:nth-child(2)  选择属于其父元素的第二个子元素的每个&lt;p&gt;元素。
+:enabled、:disabled 控制表单控件的禁用状态。
+:checked  单选框或复选框被选中。</code></pre></li>
+<li><p><strong>如何居中div？</strong></p>
+<pre><code class="css">div{
+    width:200px;
+    margin:0 auto;
+}</code></pre>
+</li>
+</ul>
+<ul>
+<li><p><strong>box-sizing属性？</strong></p>
+<div class="p_bgcolor">
+    <p>用来控制元素的盒子模型的解析模式，默认为content-box;</p><p>
+    </p><p>&nbsp;&nbsp;（1）content-box:W3C标准盒子模型，height/width = content的高/宽</p><p>
+    </p><p>&nbsp;&nbsp;（2）border-box:IE传统盒子模型，height/width = border + padding + content的高/宽</p><p>
+</p></div>
+</li>
+<li><p><strong>CSS选择器有哪些？哪些属性可以继承？</strong></p>
+</li>
+<li><p><strong>CSS优先级算法如何计算？</strong></p>
+</li>
+<li><p><strong>CSS3新增伪类有哪些**</strong>？**</p>
+</li>
+<li><p><strong>display有哪些值？说明它们的作用？</strong></p>
+</li>
+<li><p><strong>position的值relative和absolute定位原点是？</strong></p>
+</li>
+<li><p><strong>介绍一下 Sass 和 Less 是什么？它们有何区别？</strong></p>
+</li>
+<li><p><strong>如何设计一个满屏“品”字布局？</strong></p>
+<div class="p_bgcolor">
+  <p>简单的方式：</p>
+  <p>上面的div宽100%，</p>
+  <p>下面的两个div分别宽50%，</p>
+  <p>用float或inline使其不换行。</p>
 </div>
-<section class="is_text_style1">
-    <div class="inner">
-        <p>
-            <strong>随心:</strong>
-            <span>走自己的路，让别人去说吧</span>
-        </p>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p><strong>CSS3有哪些新特性？</strong></p>
+<div class="p_bgcolor">
+    <p>（1）rgba和透明度opcity</p>
+    <p>（2）background-image/size/repeat</p>
+    <p>（3）word-wrap(对不可分割单词换行):break-word</p>
+    <p>（4）文字阴影：text-shadow:5px 5ps 5px #FF0000(水平阴影，垂直阴影，模糊距离，阴影颜色)</p>
+    <p>（5）font-face属性：定义自己的字体</p>
+    <p>（6）圆角（边框半径）：border-radius属性用于创建圆角</p>
+    <p>（7）边框图片：border-image</p>
+    <p>（8）盒阴影：box-shadow:10px 10px 5px #888888</p>
+    <p>（9）媒体查询：定义两套css，当浏览器尺寸变化时采用不同的属性</p>
+</div>
+</li>
+<li><p><strong>请解释一下CSS3的Flexbox（弹性盒布局模型），以及适用场景？</strong></p>
+</li>
+<li><p><strong>用纯CSS创建一个三角形的原理是什么？**</strong></p>
+</li>
+<li><p><strong>CSS多列等高如何实现？</strong></p>
+</li>
+<li><p><strong>viewport所有属性？</strong></p>
+</li>
+<li><p><strong>什么是BFC？触发BFC的条件？</strong></p>
+</li>
+<li><p><strong>transition和animation的区别是什么？</strong></p>
+</li>
+</ul>
+
+</div>
+
+                </div>
+                <div id="content_2">
+                     <div id="aside_r">
+    <div id="logo">
+        <h1 class="mobileUI-site-name">smile</h1>
     </div>
-</section>
-<section class="is_recent_ports">
-    <h2>最近帖子</h2>
-    <ul>
-        <li><a href="#">走自己的路，让别人去说吧...</a></li>
-        <li><a href="#">走自己的路，让别人去说吧</a></li>
-        <li><a href="#">走自己的路，让别人去说吧</a></li>
-        <li><a href="#">走自己的路，让别人去说吧</a></li>
-        <li><a href="#">走自己的路，让别人去说吧</a></li>
-    </ul>
-</section>
-<!--最近评论-->
-<section class="is_recent_comments">
-    <h2>最近评论</h2>
-    <ul>
-        <li><a href="#">案例</a></li>
-        <li> <a href="#">流量</a></li>
-        <li> <a href="#">世界级的</a></li>
-    </ul>
-</section>
+    <section class="is_text_style1">
+        <div class="inner">
+            <p class="my_border">
+                <strong>随心:</strong>
+                <span>走自己的路，让别人去说吧</span>
+            </p>
         </div>
+    </section>
+    <div class="is_recent_ports">
+        <h2>最近帖子</h2>
+        <ul>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/面试题/js篇/">js篇</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/栅格布局/">栅格布局</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/弹性布局/">弹性布局</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/浮动(2)/">浮动(2)</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/15/经典布局问题/浮动(1)/">浮动(1)</a>
+                <span class="aside_r_date">
+                2019-08-15</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/相对定位/">相对定位</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/17/经典布局问题/绝对定位/">绝对定位</a>
+                <span class="aside_r_date">
+                2019-08-17</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/15/面试题/css篇/">css篇</a>
+                <span class="aside_r_date">
+                2019-08-15</span>
+            </li>
+            
+            <li class="aside_r_li">
+                <a class="aside_r_title" href="/2019/08/15/面试题/html篇/">html篇</a>
+                <span class="aside_r_date">
+                2019-08-15</span>
+            </li>
+            
+            
+        </ul>
+    </div>
+    <!--最近评论-->
+    <section class="is_recent_comments">
+        <h2>最近评论</h2>
+        <ul>
+            <li><a href="#">暂无相关内容 </a></li>
+        </ul>
+    </section>
+</div>
+                </div>
+            </div>
     </div>
 
     <script src="/lib/highlight/highlight.pack.js"></script>
@@ -228,6 +435,6 @@
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/main.js"></script>
 
-
+    </div>
 </body>
 </html>

@@ -37,15 +37,16 @@ body,input,textarea{
     width: 15em;
     position: absolute;
     right: 0;
-    top:0;
-    height: 100%;
-    background-color:#364050;
-    background-image: url(../img/bg1.png);
+    top:3rem;
+    border:1px solid white;
+    box-shadow: inset 0em 0em 0em 1px rgba(255,255,255,0.15),0 0.025em 0.15em 0em;
+    background-color: white;
 }
 #logo{
     background-color: #c94663;
     background-image: url(../img/bg1.png);
     padding: 1.75em 0.5em 1.75em 0.5em;
+    margin: 2em auto;
     border-radius: 0.4em;
     text-align: center;
     box-shadow: inset 0em 0em 0em 1px rgba(255,255,255,0.15),0 0.025em 0.15em 0em rgba(0,0,0,0.25);
@@ -59,7 +60,10 @@ body,input,textarea{
     line-height: 0.8;
     margin-bottom: 0;
 }
-
+#content_3{
+    background-color: #e8e8e8;
+    background-image: url(../img/bg2.png);
+}
 #content_1{
 
     width:100%;
@@ -67,16 +71,20 @@ body,input,textarea{
     padding-right: 15em;
     box-shadow:0 0 0.25em 0 rgba(0,0,0,.25);
     background-color: #e8e8e8;
-    background-image: url(../img/bg2.png)
+    background-image: url(../img/bg2.png);
 }
 #content{
-    padding: 3em 5em 8em 5em;
+    padding:3em 3em 8em 3em;
+    margin:0 2em;
+    border:1px solid white;
+    box-shadow: inset 0em 0em 0em 1px rgba(255,255,255,0.15),0 0.025em 0.15em 0em;
+    background-color: white;
+
 }
 nav{
     height:3em;
-    background: #b9e1b1;
     width: 100%;
-
+    background: linear-gradient(to bottom,#ebeef2,#ccc);
 }
 nav #menu{
     padding-right: 1.5rem;
@@ -92,6 +100,7 @@ nav ul li a{
 }
 nav ul li a:hover,aside ul li a:hover{
     background: rgba(225,225,225,.1);
+    text-decoration: none;
 }
 
 aside input{
@@ -124,7 +133,7 @@ aside span.fa.fa-search {
     text-align: center;
     line-height: 3rem;
     padding-right:1rem;
-    background: rgba(19,20,23,.3);
+    background: transparent;
 }
 p.text1{
     font-size: 1.5em;
@@ -145,31 +154,42 @@ p.text1{
     list-style: none;
     line-height: 25px;
 }
-section ul li a,#tree ul li a{
+section ul li a,#tree ul li a,.aside_r_li{
     text-decoration: none;
     color:#fff;
-    display: block;
-    width: 100%;
-    height:3em;
-    line-height:3em;
+    height:2em;
+    line-height:2em;
     margin: 0.5rem auto;
     border-radius: 0.3em;
     transition-duration: 0.3s;
 }
+.aside_r_li {
+    color:#1d2124;
+}
+span.aside_r_date{
 
-.is_recent_ports ul li a:hover{
+    float:right;
+}
+section ul li a,#tree ul li a{
+    display: block;
+    width: 100%;
+}
+section ul li a{
+    color: #1d2124;
+}
+.is_recent_ports{
+    height:26em;
+    overflow: hidden;
+}
+.is_recent_ports ul li a:hover,.is_recent_comments ul li a:hover,.aside_r_li a:hover{
     cursor: pointer;
     text-decoration: none;
-    color:#fff;
+    color:#999999;
 }
-/*aside #tree .active a,aside #tree .active a:hover{
-    color:#87daff;
-    border-bottom: 1px solid #87daff;
-}*/
 aside #tree i.fa{
     padding-right: 5px;
 }
-#content_2 section:before, #content_2 li:before{
+#content_2 section:before, #content_2 li:before,#content_2 .is_recent_ports:before{
     content: '';
     border-top: solid 1px;
     border-bottom: solid 1px;
@@ -188,16 +208,32 @@ section > :last-child{
     margin:2em 0 1em 0;
     font-size: 1.5em;
 }
+#aside_r{
+    width: 80%;
+    margin: 0 auto;
+}
 section div.inner{
     background-color: rgba(0,0,0,0.1);
     border-radius: 0.4em;
     padding: 1.25em;
     margin: 2em 0;
-    color: white;
+    color: #1d2124;
     font-size: 14px;
+
     box-shadow: 0 0 0 1px rgba(255,255,255,0.05), inset 0 0 0.25em 0 rgba(0,0,0,0.25);
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) and (min-width: 766px){
+    #aside{
+        display: none;
+    }
+    #content_1{
+        padding-left: 0;
+    }
+    #post-author,#post-date{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
     #aside{
         display: none;
     }
@@ -210,15 +246,24 @@ section div.inner{
      }
     #post-author,#post-date{
         position:absolute;
-
         color:#999;
+    }
+    #articleList .atricle-read{
+        margin-top: -7em;
+    }
+    #articleList .article-digest{
+        display: none;
+
+    }
+    #articleList li{
+
     }
 }
 /*作者，时间相关*/
 #post-author,#post-date{
     font-size: 9px;
     position:absolute;
-    right:20%;
+    right:22%;
     color:#999;
 }
 #post-author{
@@ -231,8 +276,8 @@ section div.inner{
     padding: 30px;
 }
 #article{
-    background-color: #e8e8e8;
-    background-image: url(../img/bg2.png);
+    background-color: white;
+    /*background-image: url(../img/bg2.png);*/
     height:100%;
 
 }
@@ -343,3 +388,64 @@ section div.inner{
 #article table tr:last-child th:last-child{
     border-bottom-right-radius:3px;
 }
+/*主页*/
+#articleList{
+    position: relative;
+}
+#articleList .article-li{
+    margin-bottom: 3em;
+    height: 12em;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 8px #999;
+    list-style: none;
+    border: 1px solid #999;
+}
+#articleList .article-digest * {
+    word-wrap: break-word;
+    display: inline;
+    font-size: 1.2em;
+    color: #555;
+    text-decoration: none;
+    cursor: auto;
+    box-shadow: none;
+}
+#articleList .article-digest{
+    padding: 2em;
+    position: relative;
+    /*top:0.3em;*/
+    width: 85%;
+
+}
+#articleList .article-date{
+    position: relative;
+    background: #e06c75;
+
+    top:-1.2em;
+    border-radius:2px;
+    margin-left: 2em;
+    padding: 0.5em;
+    border-radius: 2px;
+    color:#f9f7ed;
+}
+#articleList .atricle-read {
+    position: absolute;
+    background: #e06c75;
+    color: #f9f7ed;
+    padding: 0.8em;
+    border-radius: 2px;
+    right: 0em;
+    margin-top: 7em;
+    text-decoration: none;
+    z-index: 1;
+}
+
+#articleList .article-title{
+    position: relative;
+    color:#555;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    top:1em;
+    right:5em;
+}
+
