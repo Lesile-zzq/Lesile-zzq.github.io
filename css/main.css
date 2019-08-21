@@ -17,7 +17,10 @@ body,input,textarea{
     font-weight: 400;
     color: #565656;
 }
-
+.ppp{
+    display: block;
+    opacity:0.7;
+}
 
 #aside{
     position: fixed;
@@ -37,6 +40,7 @@ body,input,textarea{
     width: 15em;
     position: absolute;
     right: 0;
+    z-index: 2;
     top:3rem;
     border:1px solid white;
     box-shadow: inset 0em 0em 0em 1px rgba(255,255,255,0.15),0 0.025em 0.15em 0em;
@@ -339,7 +343,7 @@ section div.inner{
    padding-left: 3px;
 
 }
-#article div.p_bgcolor{
+#article .p_bgcolor{
     background-color: rgba(0,0,0,0.1);
     font-size:14px;
     margin: 0 0 5px;
